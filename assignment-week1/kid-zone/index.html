@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>KidZone - School for kids</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0 user-scalable=no">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -13,56 +14,58 @@
 		<div class="header-logo">
 			<h1><a href="#"><i class="fas fa-shield-alt "></i>&nbsp;KidZone</a></h1>
 		</div>
-		<nav>
+		<nav class="navlist">
 			<ul>
-				<li><i class="fas fa-chess"></i>&nbsp;<a href="#">Home</a></li>
-				<li><i class="fas fa-chess-king"></i>&nbsp;<a href="#about">About</a></li>
-				<li><i class="fas fa-chess-queen"></i>&nbsp;<a href="#">Gallery</a></li>
-				<li><i class="fas fa-chess-knight"></i>&nbsp;<a href="#contact">Contact Us</a></li>
+				<li><a href="#"><i class="fas fa-chess"></i>&nbsp;Home</a></li>
+				<li><a href="#about"><i class="fas fa-chess-king"></i>&nbsp;About</a></li>
+				<li><a href="#"><i class="fas fa-chess-queen"></i>&nbsp;Gallery</a></li>
+				<li><a href="#contact"><i class="fas fa-chess-knight"></i>&nbsp;Contact Us</a></li>
 			</ul>
 		</nav>
 	</header>
 	<!-- end of header section -->
 
-	<!-- Hero banner container -->
-	<section class="hero-container">
-		<div class="hero1">
-		</div>
-		<div class="hero2">
-			<blockquote>
-				<p>"Good education is not about filling the vessel, but about igniting the flame"- Socrates.</p>
-			</blockquote>
-		</div>
-	</section>
-	<!-- end of Hero banner section -->
+	<!-- Main content section -->
+	<main class="main">
+		<!-- Hero banner container -->
+		<section class="hero-container">
+			<div class="hero1">
+				<h2>Inspiration</h2>
+			</div>
+			<div class="hero2">
+				<blockquote>
+					"Good education is not about filling the vessel, but about igniting the flame" <br/><span>- Socrates.</span>
+				</blockquote>
+			</div>
+		</section>
+		<!-- end of Hero banner section -->
 
-	<!-- section that contains three columns -->
-	<section class="three-column-layout" id="about">
-		<!-- Why kidzone -->
-		<div class="column-feature">
-			<img src="images/why-kidzone.jpg" alt"Why Kidzone" />
-			<h3>Why KidZone ?</h3>		
-			<p>KidZone, ranked amongst the top 100 franchise opportunities by Franchise India for 2015 KidZone is part of one of the leading education organizations in India and Nepal, Zee Learn Ltd which is backed <br/><a href="#"> ...read more</a></p>
-		</div>
-		<!-- What do youneed before you join Kidzone -->
-		<div class="column-feature">
-			<img src="images/what-you-need.jpg" alt"What you need" />
-			<h3>What do you need</h3>
-			<p>KidZone, ranked amongst the top 100 franchise opportunities by Franchise India for 2015 The franchisee should have minimum 2000 – 3000 sq.ft carpet area in a residential location in the city.<br/> <a href="#"> ...read more</a></p>
-		</div>
-		<!-- Awards and testimonials section -->
-		<div class="column-feature">
-			<img src="images/awards.jpg" alt"Awards and Testimonials" />
-			<h3>Awards and Testimonials</h3>
-			<p>Appreciation is a wonderful thing. Have a look at the success and achievements of Aisa's No. 1 preschool. Know more about the awards here. Winner of Franchise India “Franchisor of the Year” award <br/><a href="#"> ...read more</a></p>
-		</div>
-	</section>
-	<!-- End of three column section -->
+		<!-- section that contains three columns -->
+		<section class="three-column-layout" id="about">
+			<!-- Why kidzone -->
+			<div class="column-feature">
+				<img src="images/why-kidzone.jpg" alt="Why Kidzone" />
+				<h3>Why KidZone ?</h3>		
+				<p>KidZone, ranked amongst the top 100 franchise opportunities by Franchise India for 2015 KidZone is part of one of the leading education organizations in India and Nepal, Zee Learn Ltd which is backed <br/><a href="#"> ...read more</a></p>
+			</div>
+			<!-- What do youneed before you join Kidzone -->
+			<div class="column-feature">
+				<img src="images/what-you-need.jpg" alt="What you need" />
+				<h3>What do you need</h3>
+				<p>KidZone, ranked amongst the top 100 franchise opportunities by Franchise India for 2015 The franchisee should have minimum 2000 – 3000 sq.ft carpet area in a residential location in the city.<br/> <a href="#"> ...read more</a></p>
+			</div>
+			<!-- Awards and testimonials section -->
+			<div class="column-feature">
+				<img src="images/awards.jpg" alt="Awards and Testimonials" />
+				<h3>Awards and Testimonials</h3>
+				<p>Appreciation is a wonderful thing. Have a look at the success and achievements of Aisa's No. 1 preschool. Know more about the awards here. Winner of Franchise India “Franchisor of the Year” award <br/><a href="#"> ...read more</a></p>
+			</div>
+		</section>
+		<!-- End of three column section -->
 
-	<!-- Two column section -->
-	<section class="two-column-layout" id="contact">
-		<div class="col1">
-			<div id="main">
+		<!-- Two column section -->
+		<section class="two-column-layout" id="contact">
+			<div class="col1">
 				<!-- Query Form -->
 				<div id="form-sample">
 					<h2> Leave your Query here.</h2>
@@ -73,7 +76,7 @@
 						<label for="lastName">Last Name</label>
 						<input type="text" id="lastName" class="lastName"/><br/>
 						<label for="mailId">Mail Id</label>
-						<input type="mail" id="mailId" class="mailId" required/><br/>
+						<input type="email" id="mailId" class="mailId" required/><br/>
 						<label for="mailId">Contact Number</label>
 						<input type="tel" id="phone-number" name="phone-number" /><br/>
 						<label for="query">Enter your query</label>
@@ -82,50 +85,51 @@
 					</form>
 				</div>
 			</div>
-		</div>
-		<!-- Rows within columns -->
-		<div class="col2">
-			<!-- Programs offered section -->
-			<div class="col2-row1">
-				<h3>Our Programs</h3>
-				<div class="program-cols">
-					<div class="program-cols-1">
-						<ul>
-							<li>Young Scientists</li>
-							<li>Kid-O-Fit</li>
-							<li>Karate for Kids</li>
-							<li>Lovely Mischief kid</li>
-						</ul>
-					</div>
-					<div class="program-cols-2">
-						<ul>
-							<li>Dance</li>
-							<li>Singing</li>
-							<li>Little Shakespere</li>
-							<li>Swimming</li>
-						</ul>
+			<!-- Rows within columns -->
+			<div class="col2">
+				<!-- Programs offered section -->
+				<div class="col2-row1">
+					<h3>Our Programs</h3>
+					<div class="program-cols">
+						<div class="program-cols-1">
+							<ul>
+								<li>Young Scientists</li>
+								<li>Kid-O-Fit</li>
+								<li>Karate for Kids</li>
+								<li>Lovely Mischief kid</li>
+							</ul>
+						</div>
+						<div class="program-cols-2">
+							<ul>
+								<li>Dance</li>
+								<li>Singing</li>
+								<li>Little Shakespere</li>
+								<li>Swimming</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- More Info about Kidzone -->
-			<div class="col2-row2">
-				<p>KidZone is the largest and one of the most profitable preschool chains in Asia with more than 1700+ centers in over 550+ cities across the country. Within almost a decade of its existence, KidZone has touched the lives of more than 450,000 children. Apart from the positive impact that KidZone brings in the lives of its business partners, we also empower them to bring positive changes in the lives of our teachers and numerous others.<br/><br/>
-				To qualify to be a KidZone school franchise, you need to have a property with minimum area of 2000-3000 sq. feet and a minimum investment capacity of Rs. 12, 00,000. KidZone is looking for passionate entrepreneurs who are committed and willing to promote quality education and help in shaping the future of the nation.</p>
-			</div>
-		</div>
-	</section>
-	<!-- end of two column section -->
+				<!-- More Info about Kidzone -->
+				<div class="col2-row2">
+					<article>KidZone is the largest and one of the most profitable preschool chains in Asia with more than 1700+ centers in over 550+ cities across the country. Within almost a decade of its existence, KidZone has touched the lives of more than 450,000 children. Apart from the positive impact that KidZone brings in the lives of its business partners, we also empower them to bring positive changes in the lives of our teachers and numerous others.<br/><br/>
+						To qualify to be a KidZone school franchise, you need to have a property with minimum area of 2000-3000 sq. feet and a minimum investment capacity of Rs. 12, 00,000. KidZone is looking for passionate entrepreneurs who are committed and willing to promote quality education and help in shaping the future of the nation.</article>
+					</div>
+				</div>
+			</section>
+			<!-- end of two column section -->
+		</main>
+		<!-- End of main section -->
 
-	<!-- Footer Section -->
-	<footer class="footer">
-		<p class="copyright">Copyrights &copy; 2018 All Rights Reserved by KforKids.</p>
-		<ul class="icons">
-			<li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-			<li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-			<li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
-			<li><a href="#"><i class="fas fa-envelope-square fa-2x"></i></a></li>
-		</ul>
-	</footer>
-	<!-- end of footer section -->
-</body>
-</html>
+		<!-- Footer Section -->
+		<footer class="footer">
+			<span class="copyright">Copyrights &copy; 2018 All Rights Reserved by KforKids.</span>
+			<ul class="icons">
+				<li><a href="#"><i class="fab fa-facebook-square fa-2x"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+				<li><a href="#"><i class="fas fa-envelope-square fa-2x"></i></a></li>
+			</ul>
+		</footer>
+		<!-- end of footer section -->
+	</body>
+	</html>

@@ -3,12 +3,12 @@
 @import "http://fonts.googleapis.com/css?family=Ubuntu";
 
 /* set the default values for bod content*/
-body{
-	max-width:1400px;
+body, .main{
+	width:100%;
 	background: #FAF6F6;
 	margin: auto;
 	color: #2E0014;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	font-family: 'Righteous', cursive;
 }
 
@@ -22,15 +22,15 @@ body{
 }
 
 /* Navigation bar */
-nav{
-	flex: 1;
+.navlist{
+	position: relative;
 	margin:auto;
-	padding-top:12px;	
-
+	padding-top:12px;
+	float: right;	
 }
 .header-logo{
 	float:left;
-	width:40%;
+	/*width:40%;*/
 	margin:auto;
 	color: #2E0014;
 	padding-left: 20px;
@@ -40,23 +40,20 @@ nav{
 
 
 
-header ul{
+.navlist ul{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	min-width: 200px;
 }
 
-header li{
+.navlist li{
 	display: inline-block;
 	font-size: 1.2em;
+	margin-right:1.5em;
 }
 
-@media (max-width: 600px){
-	.header-logo{
-		width: 150px;
-	}
-}
+
 
 a{
 	text-decoration: none;
@@ -66,18 +63,45 @@ a{
 header li i,a:hover{
 	cursor: pointer;
 	text-shadow: 1px 1px 1px #2E0014;
-	font-style: bold;
+	font-weight: bold;
+}
+
+@media (max-width: 900px){
+	.header-logo{
+		width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+	.navlist{
+		width: 100%;
+		text-align: center;
+	}
+
+	.navlist ul{
+		padding: 0;
+	}
+
+	.navlist li{
+	font-size: 1em;
+	margin: auto;
+	padding: 0;
+	}
 }
 
 .hero1{
 	width:100%;
 	background-image: url("../images/hero1.jpg");
 	background-repeat: no-repeat; 
-	background-size: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position:center center;
 	height:700px;
 	opacity: 0.4;
 	right:0;
 	margin-top: 80px;
+}
+.hero1 h2{
+	text-indent: -9999px;
 }
 .hero2{
 	width: 100%;
@@ -86,28 +110,56 @@ header li i,a:hover{
 	z-index:50;
 }
 
-.hero2 p{
+.hero2 blockquote{
 	font-size: 60px;
 	text-align: center;
 	color: #994A57;
 	margin-top: 25%;
 }
-@media (max-width: 800px){
-	.hero1{
-		height:350px;
-	}
 
+.hero2 blockquote span{
+	font-style: italic;
+}
+
+@media (max-width: 600px){
+	.hero1{
+		height:300px;
+	}
 	.hero2{
 		margin-top: 40px;
 	}
-	.hero2 p{
+	.hero2 blockquote{
 		font-size: 1em;
 	}
 }
 
 .three-column-layout{
-	margin:	30px auto;
-	padding: 10px;
+	margin:	20px 0;
+	padding: 90px 0 0 0;
+	width: 100%;
+}
+
+.column-feature{
+	padding: 5px;
+	flex-basis: 32%;
+	box-sizing: border-box;
+	color: #2E0014;
+	letter-spacing: 1px;
+	background: #FAF6F6;
+}
+
+.column-feature a{
+	float: right;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.column-feature p{
+	padding: 5px;
+}
+
+.column-feature img{
+	height: 50%;
 	width: 100%;
 }
 
@@ -121,53 +173,30 @@ header li i,a:hover{
 
 @media (max-width: 400px){
 	.three-column-layout{
-	margin-left: 15px;
-}
-}
-
-.column-feature{
-	padding: 5px;
-	flex-basis: 32%;
-	box-sizing: border-box;
-	color: #2E0014;
-	letter-spacing: 1px;
-	background: #FAF6F6;
-	padding-right: 20px;
-}
-
-.column-feature a{
-	float: right;
-	margin-top: 10px;
-}
-
-.column-feature p{
-	padding: 5px;
-}
-
-.column-feature img{
-	height: 50%;
-	width: 100%;
+	margin: 0;
+	}
+	.column-feature{
+		padding: 5px;
+	}
 }
 
 .two-column-layout{
 	display: flex;
 	flex-wrap: wrap;
-	padding: 10px;
+	padding: 60px 10px 10px 10px;
 	background: #FAF6F6;
 	justify-content: space-between;
 }
 
 .col1{
 	flex: 1;
-	padding: 50px;
-}
-
-.col1 #main{
+	padding: 30px 50px;
 	width:100%;
 	height:100%;
 	margin:0 auto;
 	font-family:'Ubuntu',sans-serif
 }
+
 .col1 #form_sample{
 	text-align:center;
 	border:1px solid white;
@@ -213,6 +242,7 @@ textarea{
   color: #FFFFFF;
   text-align: center;
   width:50%;
+  min-width: 200px;
   font-size: 18px;
   font-family:'Ubuntu',sans-serif;
   padding: 20px;
@@ -243,7 +273,12 @@ textarea{
 
 @media (max-width: 600px){
 	.button{
+		width: 200px;
 		font-size:1em;
+	}
+	.col1 #form_sample h2{
+		font-size: 1em;
+		text-align: center;
 	}
 }
 .col2{
@@ -258,21 +293,26 @@ textarea{
 	top:50px;
 }
 
+
 .col2-row1 	h3{
 	font-size: 2em;
 	letter-spacing: 2px;
 	text-align: center;
 }
+
+@media (min-width: 400px){
 .col2-row1 .program-cols{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	align-content: center;
 }
+}
 
 .col2-row1 .program-cols .program-cols-1, .program-cols-2{
 	flex:1;
 	height: 100%;
+	margin:0;
 }	
 
 .program-cols{
@@ -292,31 +332,43 @@ textarea{
 	position: relative;
 }
 
+
+@media (max-width: 600px){
+	.col2-row1{
+		top: auto;
+	}
+
+	.program-cols ul{
+	list-style: disc;
+	margin: 0 auto;
+	}
+}
+
 footer{
+	width: 100%;
 	display:block;
 	box-sizing: inherit;
 	padding-bottom: 30px;
 	padding-top: 30px;
 	background: #FCDDF2;
 }
-footer p{
-	width: 70%;
+footer span{
+	width: 50%;
 	height: 100%;
 	float: left;
 	margin:auto;
-	padding-left:30px;
+	padding-left:50px;
 	line-height: 50px;
 	font-size: 0.9em;
-
+	text-align: center;
 }
 footer .icons{
 	list-style: none;
 	text-align: center;
-	margin: 5px 10px;
 }
 footer li{
 	display: inline;
-	margin-right: 50px;
+	margin: 0 25px;
 }
 
 footer a{
@@ -326,4 +378,18 @@ footer a{
 footer a:hover{
 	cursor: pointer;
 	color: #994A57;
+}
+
+@media (max-width: 1024px){
+	footer span{
+		width: 100%;
+		padding: 2px 0;
+
+	}
+	footer .icons{
+		width: 100%;
+	}
+	footer ul{
+		padding: 0;
+	}
 }
