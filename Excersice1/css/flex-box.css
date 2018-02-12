@@ -1,4 +1,4 @@
-body{
+/*body{
 	background: #C0F8D1;
 }
 
@@ -106,4 +106,46 @@ order: 2;
 .col2-row2{
 	background: #B287A3;
 	flex: 1;
+}
+*/
+
+section{
+	display: flex;
+}
+.center-x{
+	display: flex;
+	justify-content: center;
+}
+
+.around{
+	display: flex;
+	justify-content: space-around;
+}
+
+.between{
+	display: flex;
+	justify-content: space-between;
+}
+
+.start{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.end{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.last{
+	order: 1;
+}
+
+.first{
+	order: -1;
+}
+
+.reverse{
+	display: flex;
+	flex-direction: row-reverse;
 }

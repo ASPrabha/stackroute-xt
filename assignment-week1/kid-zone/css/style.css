@@ -372,12 +372,12 @@ footer li{
 }
 
 footer a{
-	color: #FAF6F6;
+	color: #994A57;
 }
 
 footer a:hover{
 	cursor: pointer;
-	color: #994A57;
+	font-weight: bold;
 }
 
 @media (max-width: 1024px){
